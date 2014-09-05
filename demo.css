@@ -1,5 +1,7 @@
   body{
   	background: #E0DADA;
+  	color: white;
+  	font-family: helvetica;
   }
 
   .logo{
@@ -13,6 +15,8 @@
   	background: white;
   	margin: 0 auto;
   	border-radius: 10px;
+  	-webkit-box-shadow: 0 0 112px 5px rgba(0,0,0,.1);
+	box-shadow: 0 0 112px 5px rgba(0,0,0,.1);
   }
 
   .product{
@@ -32,9 +36,10 @@
   	border-radius: 10px;
   	opacity: .7;
   }
-  
+
   .upload:hover{
   	opacity: 1;
+  	cursor: pointer;
   }
 
   .guide{
@@ -72,4 +77,12 @@
   .buttonbar{
   	padding: 5px;
   	text-align: center;
+  }
+
+  footer{
+  	color: #696969;
+  	text-align: center;
+  }
+  footer a{
+  	color: #696969;
   }

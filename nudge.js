@@ -38,7 +38,7 @@ var h = canvas.height;
 
 var canvasStyleWidth = parseInt(window.getComputedStyle(canvas).width);
 var scaleFactor = canvas.width / canvasStyleWidth;
-var viewableArea = (canvasStyleWidth * 0.8) * scaleFactor;
+var viewableArea = canvasStyleWidth * scaleFactor;
 var imageLoaded = false;
 
 $(document).ready(function() {
