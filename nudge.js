@@ -43,6 +43,7 @@ var imageLoaded = false;
 
 $(document).ready(function() {
 
+
 	if (isDefaultAndroidBrowser()) {
 		console.log("Android Browser");
 	}
@@ -58,7 +59,6 @@ $(document).ready(function() {
 		$('#imageLoader').trigger('click');
 		return false;
 	}, false);
-
 
 	$(document).on("mousedown touchstart", "#resetPhoto", function() {
 		images[currentSelection].xPos = canvas.width / 2;
@@ -116,6 +116,11 @@ function handleImage(e) {
 		img.src = event.target.result;
 	};
 	reader.readAsDataURL(e.target.files[0]);
+	if (supportsTouch()) {
+		$('.guide').show();
+	} else {
+		$('.desktop-controll').show();
+	}
 }
 
 var currentSelection;
@@ -223,6 +228,7 @@ canvas.addEventListener("touchend", function(event) {
 });
 
 function pointerStart(event) {
+	$('.guide').hide();
 	pointerOn = true;
 	var relativeTouch1;
 	var relativeTouch2;
@@ -390,7 +396,6 @@ function isInside(x1, y1, width1, height1, x2, y2) {
 
 function adjustSize(modifier) {
 	var img = images[currentSelection];
-	console.log("hey");
 	if (modifier === "add") {
 		img.currentHeight = scale(img.currentWidth, img.currentWidth + 10, img.currentHeight);
 		img.currentWidth += 10;
@@ -568,6 +573,15 @@ function drawImageIOSFix(ctx, img, sx, sy, sw, sh, dx, dy, dw, dh) {
 	ctx.drawImage(img, sx * vertSquashRatio, sy * vertSquashRatio,
 		sw * vertSquashRatio, sh * vertSquashRatio,
 		dx, dy, dw, dh);
+}
+
+function is_touch_device() {
+	try {
+		document.createEvent("TouchEvent");
+		return true;
+	} catch (e) {
+		return false;
+	}
 }
 
 function isDefaultAndroidBrowser() {

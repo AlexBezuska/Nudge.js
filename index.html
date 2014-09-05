@@ -10,17 +10,18 @@
   <img class="logo" src="img/logo.png"/>
 
   <div class='page'>
-    <div id='product'>
+    <div class='product'>
       <canvas height='1000' id='canvas' width='1000'></canvas>
+      <img class="guide" src="img/gesture-icon.png" style="display: none; pointer-events: none;"/>
     </div>
 
     <section class="buttonbar">
       <input class='supasmall' id='imageLoader' name='imageLoader' type='file'>
       <button id="changePhoto">Upload new photo</button>
-      <button id="scaleUp">+</button>
-      <button id="scaleDown">-</button>
-      <button id="rotateLeft"><</button>
-      <button id="rotateRight">></button>
+      <button id="scaleUp" class="desktop-controll" style="display:none;" >+</button>
+      <button id="scaleDown" class="desktop-controll" style="display:none;" >-</button>
+      <button id="rotateLeft" class="desktop-controll" style="display:none;"> <</button>
+      <button id="rotateRight" class="desktop-controll" style="display:none;" >></button>
     </section>
   </div>
 </body>

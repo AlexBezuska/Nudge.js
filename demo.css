@@ -15,9 +15,20 @@
   	border-radius: 10px;
   }
 
+  .product{
+  	position: relative;
+  }
+
   #canvas{
   	width: 500px;
   	height: 500px;
+  	border-radius: 10px;
+  	position: relative;
+  }
+
+  .guide{
+  	position: absolute;
+  	top: 0px;
   	border-radius: 10px;
   }
 
