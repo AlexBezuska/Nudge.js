@@ -26,6 +26,17 @@
   	position: relative;
   }
 
+  .upload{
+  	position: absolute;
+  	top: 0px;
+  	border-radius: 10px;
+  	opacity: .7;
+  }
+  
+  .upload:hover{
+  	opacity: 1;
+  }
+
   .guide{
   	position: absolute;
   	top: 0px;

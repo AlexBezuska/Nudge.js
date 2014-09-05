@@ -48,7 +48,7 @@ $(document).ready(function() {
 		console.log("Android Browser");
 	}
 
-	$(document).on("mousedown touchstart", "#canvas", function() {
+	$(document).on("mousedown touchstart", ".upload", function() {
 		if (!imageLoaded) {
 			$('#imageLoader').trigger('click');
 		}
@@ -121,6 +121,8 @@ function handleImage(e) {
 	} else {
 		$('.desktop-controll').show();
 	}
+	$(".upload").hide();
+	$("#changePhoto").show();
 }
 
 var currentSelection;
