@@ -3,4 +3,4 @@
 
 JavaScript - pinch - zoom - rotate using canvas
 
-
+![alt tag](./img/demo.png)
